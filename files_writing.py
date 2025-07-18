@@ -1,13 +1,13 @@
-# text_data = "I like Pizza!"
+text_data = "I like Pizza!"
 
-# file_path = "stuff/output.txt"
+file_path = "stuff/output.txt"
 
-# try:
-#     with open(file=file_path, mode="a") as file:
-#         file.write("\n" + text_data)
-#         print(f"txt file '{file_path}' was created")
-# except FileExistsError:
-#     print("That file already exists")
+try:
+    with open(file=file_path, mode="w") as file:
+        file.write(text_data)
+        print(f"txt file '{file_path}' was created")
+except FileExistsError:
+    print("That file already exists")
 
 # employees = ["Eugene", "Squidward", "Spongebob", "Patrick"]
 
@@ -38,22 +38,22 @@
 # except FileExistsError:
 #     print("That file already exists")
 
-import csv
+# import csv
 
-employees = [
-    ["Name", "Age", "Job"],
-    ["Spongebob", 30, "Cook"],
-    ["Patrick", 37, "Unemployed"],
-    ["Sandy", 27, "Scientist"]
-]
+# employees = [
+#     ["Name", "Age", "Job"],
+#     ["Spongebob", 30, "Cook"],
+#     ["Patrick", 37, "Unemployed"],
+#     ["Sandy", 27, "Scientist"]
+# ]
 
-file_path = "stuff/output.csv"
+# file_path = "stuff/output.csv"
 
-try:
-    with open(file=file_path, mode="w", newline="") as file:
-        writer = csv.writer(file)
-        for row in employees:
-            writer.writerow(row)
-        print(f"csv file '{file_path}' was created")
-except FileExistsError:
-    print("That file already exists")
+# try:
+#     with open(file=file_path, mode="w", newline="") as file:
+#         writer = csv.writer(file)
+#         for row in employees:
+#             writer.writerow(row)
+#         print(f"csv file '{file_path}' was created")
+# except FileExistsError:
+#     print("That file already exists")
